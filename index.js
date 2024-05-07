@@ -18,6 +18,13 @@ io.on('connection', (socket) => {
     console.log('a user disconnected');
   });
 });
+
+
+if (socket.on){
 server.listen(3000, '127.0.0.0', () => {
   console.log('Server is running on http://127.0.0.0:3000');
 });
+}else{
+  console.log("Server Not Found")
+}
+
