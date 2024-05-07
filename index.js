@@ -4,7 +4,7 @@ const socketio = require('socket.io');
 const server = http.createServer();
 const io = socketio(server, {
   cors: {
-    origin: 'http://192.168.100.56:8888',
+    origin: 'http://127.0.0.0:8888',
     methods: ['GET', 'POST']
   }
 });
@@ -18,6 +18,6 @@ io.on('connection', (socket) => {
     console.log('a user disconnected');
   });
 });
-server.listen(3000, '192.168.100.56', () => {
-  console.log('Server is running on http://192.168.100.56:3000');
+server.listen(3000, '127.0.0.0', () => {
+  console.log('Server is running on http://127.0.0.0:3000');
 });
