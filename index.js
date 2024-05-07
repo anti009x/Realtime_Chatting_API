@@ -4,7 +4,7 @@ const socketio = require('socket.io');
 const server = http.createServer();
 const io = socketio(server, {
   cors: {
-    origin: 'http://127.0.0.0:8666',
+    origin: 'http://127.0.0.0:8888',
     methods: ['GET', 'POST']
   }
 });
